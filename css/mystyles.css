@@ -1,23 +1,35 @@
-
-.content-wrap{
-	font-size: 18px;
+.content-wrap {
+    float: left;
+    font-size: 18px;
 }
 
-.form-class{
-/*border-style: solid;*/
-margin-left: 75px;
-margin-top: 20px;
+.form-class {
+    /*border-style: solid;*/
+    margin-left: 75px;
+    margin-top: 20px;
 }
 
-.radio-group-label{
-	font-weight: bold;
-	padding-bottom: 50px;
+.radio-group-label {
+    font-weight: bold;
+    padding-bottom: 50px;
 }
 
-.radio_label{
-	padding-right: 10px;
-}
-.chart-class{
-	border-style: solid;
+.radio_label {
+    padding-right: 10px;
 }
 
+.chart-class {
+    border-style: solid;
+}
+
+.msg-class {
+    font-size: 22px;
+    margin-top: 50px;
+    padding-right: 40px;
+    font-weight: 2pt;
+}
+
+.warning-class {
+    color: red;
+    font-size: 20px;
+}

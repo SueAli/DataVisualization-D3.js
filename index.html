@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/css/mystyles.css" />
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
     <script type="text/javascript" src="/js/titanic_js.js"></script>
-  </head>
-  <body>
-    
-    <div id="header" class="test"><h1>Titanic: Demographics of the Passengers</h1></div>
+</head>
+
+<body>
+    <div id="header" class="test">
+        <h1>Titanic: Demographics of the Passengers</h1></div>
     <div id="main-wrap">
-      <div class="content-wrap">
-        <script type="text/javascript">
-        /*
-        Use D3 (not dimple.js) to load the csv file
-        and pass the contents of it to the draw function
-        */
-        d3.csv("/data/titanic_data.csv", function (d){
-        // Translating Pclass into readable categories
-        if (d['Pclass'] === '1'){
-        d['Pclass'] = '1st' ;
-        d["Class"]= 1;
-        } else if (d['Pclass'] === '2'){
-        d['Pclass'] = '2nd' ;
-        d["Class"]= 2;
-        } else if (d['Pclass'] === '3'){
-        d['Pclass'] = '3rd';
-        d["Class"]= 3;
-        }else{
-        d['Pclass'] = 'None';
-        }
-        // Translating Passenger "Survived" flag into readable categories
-        if (d['Survived'] === '0'){
-        d["Survived"] = "Died";
-      
-        }else{
-        d["Survived"] = "Survived";
-        d["Class"]=1;
-        }
-        // Add count value = 1 to be used later in drawing graphs
-        d['Count'] = 1;
-        return d;
-        }
-        ,draw)
-        </script>
-      </div>
+        <div class="content-wrap" id="left_area">
+            <script type="text/javascript">
+            /*
+                    Use D3 (not dimple.js) to load the csv file
+                    and pass the contents of it to the draw function
+                    */
+            d3.csv("/data/titanic_data.csv", function(d) {
+                // Translating Pclass into readable categories
+                if (d['Pclass'] === '1') {
+                    d['Pclass'] = '1st';
+                    d["Class"] = 1;
+                } else if (d['Pclass'] === '2') {
+                    d['Pclass'] = '2nd';
+                    d["Class"] = 2;
+                } else if (d['Pclass'] === '3') {
+                    d['Pclass'] = '3rd';
+                    d["Class"] = 3;
+                } else {
+                    d['Pclass'] = 'None';
+                }
+                // Translating Passenger "Survived" flag into readable categories
+                if (d['Survived'] === '0') {
+                    d["Survived"] = "Died";
+
+                } else {
+                    d["Survived"] = "Survived";
+                    d["Class"] = 1;
+                }
+                // Add count value = 1 to be used later in drawing graphs
+                d['Count'] = 1;
+                return d;
+            }, draw)
+            </script>
+        </div>
+        <div class="content-wrap" id="right_area">
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
