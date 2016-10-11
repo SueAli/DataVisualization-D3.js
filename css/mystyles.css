@@ -1,0 +1,23 @@
+
+.content-wrap{
+	font-size: 18px;
+}
+
+.form-class{
+/*border-style: solid;*/
+margin-left: 75px;
+margin-top: 20px;
+}
+
+.radio-group-label{
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+
+.radio_label{
+	padding-right: 10px;
+}
+.chart-class{
+	border-style: solid;
+}
+
